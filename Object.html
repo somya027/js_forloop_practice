@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person={
+            firstname: "Somya",
+            lastname: "Dixit",
+            age:21,
+            fullname:function(){
+                return this.firstname + " " + this.lastname;
+            }
+        }
+        document.write(person.fullname());
+        const laptop={
+            name:"macbook air",
+            model:"M4",
+            description: function(){
+                return this.name + " " + this.model;
+            } 
+        }
+         document.write(laptop.description());
+    </script>
+    
+    
+    
+</body>
+</html>
