@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        /* //q.3
+        const car={
+            brand:"toyota",
+            name:"innova",
+            year:2023    
+        };
+        document.write(car.name);  */
+        //Q.4
+        /* const car={
+            brand:"toyota",
+            name:"innova",
+            year:2023    
+        };
+        car.color="brown"
+        document.write("brand:",car.brand,"<br>");
+        document.write("car:",car.name,"<br>");
+        document.write("year:",car.year,"<br>");
+        document.write("color:",car.color,"<br>");
+        //q.5
+        document.write("width:",car.width,"<br>"); */
+        //q.6
+        /*  const person={
+             name:"somya",
+             age:21,
+             city:"Noida",
+             surname:"dixit"
+         };
+         for (let key in person){
+             document.write(key+":"+person[key],"<br>");
+         }
+  */
+        //Q.7
+        /*   const person={
+             name:"somya",
+             age:21,
+             city:"Noida",
+             surname:"dixit"
+         };
+        /*  delete person.city;
+         for (let key in person){
+             document.write(key+":"+person[key],"<br>");
+         } */
+        //Q.8
+        /*  document.write(Object.keys(person),"<br>");
+         document.write(Object.values(person),"<br>");
+         document.write(Object.entities(person)); */
+        //Q.9
+
+        /*  const obj1 = {
+             name: "somya",
+             age: 21,
+         };
+         const obj2 = {
+             city: "Noida",
+             surname: "dixit"
+         };
+         const merged = { ...obj1, ...obj2 };
+         document.write(merged); */
+        /* let obj1 = { name: "Somya" };
+        let obj2 = { age: 21 };
+
+        let person = { ...obj1, ...obj2 };
+
+        document.write(JSON.stringify(person)); */
+        let [first,second, ...others] = [10, 20, 30, 40];
+
+        document.write(first,"<br>");
+        document.write(second,"<br>");
+        document.write(others);
+    </script>
+</body>
+
+</html>

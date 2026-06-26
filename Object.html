@@ -1,32 +1,357 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <script>
-        const person={
-            firstname: "Somya",
-            lastname: "Dixit",
-            age:21,
-            fullname:function(){
-                return this.firstname + " " + this.lastname;
+        /*  const person={
+             firstname: "Somya",
+             lastname: "Dixit",
+             age:21,
+             fullname:function(){
+                 return this.firstname + " " + this.lastname;
+             }
+         }
+         document.write(person.fullname());
+         const laptop={
+             name:"macbook air",
+             model:"M4",
+             description: function(){
+                 return this.name + " " + this.model;
+             } 
+         }
+          document.write(laptop.description()); */
+        //q.1
+        const student = {
+            name: "somya",
+            age: 22,
+            marks: 30
+        };
+        function check(abc) {
+            return abc.marks >= 40 ? "passed" : "fail";
+        }
+        document.write(check(student), "<br>");
+        /* //q.2
+        let employee=[
+            {name:"Amit",salary:40000},
+            {name:"priya",salary:50000}
+        ];
+        for (let sal of employee){
+            if (emp)
+        }
+        } */
+        /*  document.write(sal(employee)); */
+        //q.3
+        /*  let prices={
+             apple:30,
+             banana:50,
+             mango:150
+         };
+         function total(pr){
+             let sum=0;
+             for (let item in pr){
+                 sum+=pr[item];
+ 
+             }
+             return sum;
+         } 
+         document.write(total(prices)); */
+        //q.4
+        /* let car = {
+            brand: "toyota",
+            speed: 40,
+            accelerate: function () {
+                this.speed += 10;
+            }
+        };
+        car.accelerate();
+        document.write(car.speed);
+        //q.5
+        function pr(obj) {
+            for (let key in obj) {
+                document.write(key + ":" + obj[key]);
             }
         }
-        document.write(person.fullname());
-        const laptop={
-            name:"macbook air",
-            model:"M4",
-            description: function(){
-                return this.name + " " + this.model;
-            } 
+        pr(student);
+        //q.6
+        let arr = [10, 25, 15, 40, 30];
+
+        function secondLargest(arr) {
+            arr.sort((a, b) => b - a);
+            return arr[1];
         }
-         document.write(laptop.description());
+
+        document.write(secondLargest(arr));
+        //q.7
+        let names = ["Priya", "Amit", "Riya", "Karan"];
+
+        for (let i = 0; i < names.length; i++) {
+            for (let j = i + 1; j < names.length; j++) {
+                if (names[i] > names[j]) {
+                    let temp = names[i];
+                    names[i] = names[j];
+                    names[j] = temp;
+                }
+            }
+        }
+
+        document.write(names);
+        //q.8
+        let num = [2, 4, 6, 8];
+
+        function square(arr) {
+            let result = [];
+
+            for (let x of arr) {
+                result.push(x * x);
+            }
+
+            return result;
+        }
+
+        document.write(square(num));
+        //q.9
+        let arr = [1, 2, 2, 3, 4, 4, 5];
+
+        function removeDup(arr) {
+            let result = [];
+
+            for (let x of arr) {
+                if (!result.includes(x)) {
+                    result.push(x);
+                }
+            }
+
+            return result;
+        }
+
+        document.write(removeDup(arr));
+        //q.10
+        let arr = [1, 2, 2, 3, 3, 3];
+
+        function Count(arr) {
+            let obj = {};
+
+            for (let x of arr) {
+                if (obj[x]) {
+                    obj[x]++;
+                }
+                else {
+                    obj[x] = 1;
+                }
+            }
+
+            return obj;
+        }
+
+        let result = Count(arr);
+
+        for (let key in result) {
+            document.write(key + " : " + result[key] + "<br>");
+        }
+        //.11
+        let users = [
+            { name: "Amit", age: 17 },
+            { name: "Priya", age: 22 },
+            { name: "Riya", age: 19 }
+        ];
+
+        function adults(arr) {
+            let result = [];
+
+            for (let user of arr) {
+                if (user.age > 18) {
+                    result.push(user.name);
+                }
+            }
+
+            return result;
+        }
+
+        document.write(adults(users));
+        //.12
+        let students = [
+            { name: "Amit", marks: 80 },
+            { name: "Priya", marks: 70 },
+            { name: "Riya", marks: 90 }
+        ];
+
+        function getTotalMarks(arr) {
+            let total = 0;
+
+            for (let s of arr) {
+                total += s.marks;
+            }
+
+            return total;
+        }
+
+        document.write(getTotalMarks(students));
+        //.13
+        let students = [
+            { name: "Amit", marks: 80 },
+            { name: "Priya", marks: 95 },
+            { name: "Riya", marks: 90 }
+        ];
+
+        let max = students[0];
+
+        for (let s of students) {
+            if (s.marks > max.marks) {
+                max = s;
+            }
+        }
+
+        document.write(max.name + " : " + max.marks);
+        //.14
+        let transactions = [
+            { amount: 100, type: "credit" },
+            { amount: 50, type: "debit" }
+        ];
+
+        function netBalance(arr) {
+            let balance = 0;
+
+            for (let t of arr) {
+                if (t.type == "credit") {
+                    balance += t.amount;
+                }
+                else {
+                    balance -= t.amount;
+                }
+            }
+
+            return balance;
+        }
+
+        document.write(netBalance(transactions));
+        //15
+        let arr1 = [1, 2, 3];
+        let arr2 = [3, 4, 5];
+
+        function mergeArrays(a, b) {
+            let result = [];
+
+            for (let x of a) {
+                if (!result.includes(x)) {
+                    result.push(x);
+                }
+            }
+
+            for (let x of b) {
+                if (!result.includes(x)) {
+                    result.push(x);
+                }
+            }
+
+            return result;
+        }
+
+        document.write(mergeArrays(arr1, arr2));
+        //16
+        let cart = [
+            { item: "Pen", price: 10, qty: 2 },
+            { item: "Book", price: 100, qty: 1 }
+        ];
+
+        function totalCart(arr) {
+            let total = 0;
+
+            for (let x of arr) {
+                total += x.price * x.qty;
+            }
+
+            return total;
+        }
+
+        document.write(totalCart(cart));
+        //17
+        let employees = [
+            { name: "Amit", salary: 40000 },
+            { name: "Priya", salary: 50000 }
+        ];
+
+        function checkSalary(arr) {
+            for (let emp of arr) {
+                if (emp.salary <= 30000) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        document.write(checkSalary(employees)); */
+        //18
+        let nums = [1, 2, 3, 4, 5, 6];
+
+        function evenOdd(arr) {
+            let result = {
+                even: [],
+                odd: []
+            };
+
+            for (let x of arr) {
+                if (x % 2 == 0) {
+                    result.even.push(x);
+                }
+                else {
+                    result.odd.push(x);
+                }
+            }
+
+            return result;
+        }
+
+        document.write(JSON.stringify(evenOdd(nums)),"<br>");
+        //19
+        let arr = [
+            ["name", "Amit"],
+            ["age", 25]
+        ];
+
+        function convertObj(arr) {
+            let obj = {};
+
+            for (let x of arr) {
+                obj[x[0]] = x[1];
+            }
+
+            return obj;
+        }
+
+        document.write(JSON.stringify(convertObj(arr)),"<br>");
+        //20
+        let students = [
+            { name: "Amit", marks: 80 },
+            { name: "Priya", marks: 95 },
+            { name: "Rahul", marks: 75 }
+        ];
+
+        function findTopper(arr) {
+            let topper = arr[0];
+
+            for (let s of arr) {
+                if (s.marks > topper.marks) {
+                    topper = s;
+                }
+            }
+
+            return topper.name + " : " + topper.marks;
+        }
+
+        document.write(findTopper(students));
+
+
+
     </script>
-    
-    
-    
+
+
+
 </body>
+
 </html>

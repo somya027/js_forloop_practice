@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+         //Q.1
+        let students = ["riya", "mahi", "mamta"];
+        let len = students.push("manvi");
+        document.write(students, "<br>");
+        let len1 = students.pop();
+        document.write(len1, "<br>");
+        document.write(students, "<br>");
+        let len2 = students.length;
+        document.write(len2, "<br>");
+        //Q.2
+        let cart = ["Laptop", "Mouse", "Keyboard"];
+        let cart1 = cart.push("Monitor");
+        document.write(cart, "<br>");
+        let cart2 = cart.pop("Mouse");
+        document.write(cart, "<br>");
+        let cart3 = cart.at("0");
+        document.write(cart3, "<br>");
+        //Q.3
+        let salaries = [25000, 30000, 45000, 50000];
+        let highest = Math.max(...salaries);
+        let lowest = Math.min(...salaries);
+        document.write("Highest salary:" + highest + "<br>");
+        document.write("Lowest salary:" + lowest + "<br>");
+        //q.4
+        let attendance = ["Present", "Absent", "Present", "Present", "Absent"];
+        let count = 0;
+        for (let x of attendance) {
+            if (x === "Present") {
+                count++;
+            }
+        }
+        document.write("Total students present are " + count + "<br>");
+        //Q.5
+        let prices = [500, 1500, 300, 800];
+        sum = 0;
+        for (let i = 0; i < prices.length; i++) {
+            sum = sum + prices[i];
+        }
+        document.write("Total sum:" + sum + "<br>");
+        //Q.6
+        let login = ["admin", "john", "robin"];
+        let login1 = login.includes("john");
+        document.write(login1, "<br>");
+        //Q.7
+        let ratings = [4, 5, 3, 5, 4];
+        let len4 = ratings.length;
+        sum = 0;
+        for (let i = 0; i < len4; i++) {
+            sum = sum + ratings[i];
+        }
+        let avg = sum / len4;
+        document.write("Average: " + avg, "<br>");
+        //Q.8
+        let number = [9213728162, 9234157297, 8120203348];
+        let l = number.length;
+        for (let i = 0; i < l; i++) {
+            document.write(number[i], "<br>");
+        }
+        //Q.9
+        let categories = ["Electronics", "Fashion", "Books"];
+        for (let x of categories) {
+            document.write(x.toUpperCase(), "<br>");
+        }
+
+        //q.10
+        let marks = [75, 80, 65, 90];
+        let lenn = marks.length;
+        let countt = 0;
+        for (let i = 0; i < lenn; i++) {
+            if (marks[i] > 70) {
+                document.write(marks[i], "<br>");
+                countt++;
+            }
+
+        } 
+        //q.11
+         let products = [
+            { name: "Laptop", price: 50000 },
+            { name: "Mouse", price: 500 },
+            { name: "Monitor", price: 12000 }
+        ];
+        for (let i=0;i<products.length;i++){
+            if(products[i].price>10000){
+                document.write(products[i].name, "<br>");
+            }
+        }
+         //q.12
+        let employees1 = [
+            { id: 1, name: "Rahul" },
+            { id: 2, name: "Amit" },
+            { id: 3, name: "Priya" }
+        ];
+        for (let i=0;i<employees1.length;i++){
+            if(employees1[i].id==2){
+                document.write(employees1[i].name,"<br>");
+            }
+        } 
+
+         //q.13
+        let prices = [1000, 2000, 3000]; */
+        //q.14
+         let marks = [85, 45, 67, 90, 30];
+        let passingmarks=[];
+        for (let i of marks){
+            if(i>=50){
+                passingmarks.push(i);
+            }
+        }
+        document.write(passingmarks,"<br>");
+        
+        //q.15
+        let orders = [
+            { id: 1, status: "Delivered" },
+            { id: 2, status: "Pending" },
+            { id: 3, status: "Delivered" }
+        ];
+        let count=0;
+        for(let i=0;i<orders.length;i++){
+            if(orders[i].status==="Delivered"){  
+                count++;
+            }
+        }
+        document.write("orders delivered:"+count+"<br>");
+        //q.16
+        let employees = [
+            { name: "Rahul", salary: 30000 },
+            { name: "Amit", salary: 45000 },
+            { name: "Priya", salary: 35000 }
+        ];
+        let total=0;
+        for(let i of employees){
+            total=total+i.salary;
+        }
+        document.write(total,"<br>");
+
+
+         //q.17
+        let movies = [
+            { title: "Movie A", rating: 4.5 },
+            { title: "Movie B", rating: 3.8 },
+            { title: "Movie C", rating: 4.9 }
+        ];
+        for(let i of movies){
+            if(i.rating>4){
+                document.write(i.title,"<br>");
+            }
+        }
+
+        //q.18
+        let customers = [
+            { name: "Rahul", city: "Delhi" },
+            { name: "Amit", city: "Mumbai" },
+            { name: "Priya", city: "Delhi" }
+        ];
+        for(let i of customers){
+            if(i.city==="Delhi"){
+                document.write(i.name,"<br>");
+            }
+        }
+        //q.19
+        let answers = ["A", "B", "C", "A", "D"];
+        let countt=0;
+        for(let i of answers){
+            if (i==="A"){
+                countt++;
+            }
+        }
+        document.write("A appears:"+countt+" times"+"<br>");
+
+        //q.20
+        let transactions = [5000, -1000, 2000, - 500];
+        let current=0;
+        for(let i of transactions){
+            current=current + i;
+        }
+        document.write(current,"<br>");
+        
+  
+         //q.21
+        let orders1 = [
+            { customer: "Rahul", amount: 2000 },
+            { customer: "Amit", amount: 5000 },
+            { customer: "Rahul", amount: 3000 }
+        ]; */
+        
+
+        //q.22
+         let inventory = [
+            { name: "Laptop", stock: 5 },
+            { name: "Mouse", stock: 0 },
+            { name: "Keyboard", stock: 10 }
+        ];
+        for(let i=0;i<inventory.length;i++){
+            if(inventory[i].stock==0){
+                document.write(inventory[i].name,"<br>");
+            }
+        }
+
+        //q.23
+        let posts = [
+            { title: "Post1", likes: 150 },
+            { title: "Post2", likes: 350 },
+            { title: "Post3", likes: 250 }
+        ];
+        let most_liked=posts[0];
+        for(let post of posts){
+            if(post.likes>most_liked.likes){
+                most_liked=post;
+            }
+        }
+        document.write(most_liked.title,"<br>");
+
+        //q.24
+        let users = ["Rahul", "Amit", "Rahul", "Neha", "Amit"];
+
+        //q.25
+        let sales = [
+            { month: "Jan", amount: 50000},
+            { month: "Feb", amount: 60000 },
+            { month: "Mar", amount: 45000 }
+        ];
+        let hSales=sales[0];
+        for(let sale of sales){
+            if(sale.amount>hSales.amount){
+                hSales=sale;
+            }
+        }
+        document.write(hSales.month,"<br>");
+
+        //q.26
+        let users1= [
+            { id: 1, name: "Rahul" },
+            { id: 2, name: "Amit" },
+            { id: 3, name: "Priya" }
+        ];
+        let result={};
+        for (let i=0;i<users1.length;i++){
+            let key=users1[i].id;
+            let value=users1[i].name;
+            document.write(key+":"+value,"<br>");
+        }
+        
+
+        //q.27
+        let products = [
+            "Laptop",
+            "Gaming Mouse",
+            "Monitor",
+            "Keyboard"
+        ];
+        for(let i=0;i<products.length;i++){
+            if(products[i].includes("Mouse")){
+                 document.write(products[i],"<br>");
+            }
+        }
+          
+
+        //q.28
+        let students = [
+            { name: "Rahul", marks: 80 },
+            { name: "Amit", marks: 95 },
+            { name: "Priya", marks: 70 }
+        ];
+        students.sort((a,b) => b.marks-a.marks);
+        document.write(students,"<br>");
+        
+
+        //q.29
+        let messages = [
+            { user: "Rahul", text: "Hello" },
+            { user: "Amit", text: "Hi" },
+            { user: "Rahul", text: "How are you?" }
+        ];
+
+        //q.30
+        let visits = [
+            { page: "Home" },
+            { page: "About" },
+            { page: "Home" },
+            { page: "Contact" },
+            { page: "Home" }
+        ]; 
+        //q.31
+        //q.32
+        //q.33
+        //q.34
+        //q.35
+        //q.36
+        //q.37
+        //q.38
+        //q.39
+        //q.40
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
